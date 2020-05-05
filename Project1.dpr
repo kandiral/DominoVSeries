@@ -1,13 +1,11 @@
 program Project1;
 
 uses
-  Forms,
+  Vcl.Forms,
   Unit1 in 'Unit1.pas' {Form1},
-  MonitoringUnit in 'MonitoringUnit.pas' {MonitoringForm},
-  OmronFQ_CR1SetsFrm in 'OmronFQ_CR1SetsFrm.pas' {OmronFQ_CR1SetsForm},
-  OmronFQ_CR1 in 'OmronFQ_CR1.pas',
-  Scheme in 'Scheme.pas',
-  SchemeItem in 'SchemeItem.pas';
+  DominoVSeries in 'DominoVSeries.pas',
+  Unit2 in 'Unit2.pas' {Form2},
+  Unit3 in 'Unit3.pas' {Form3};
 
 {$R *.res}
 
@@ -15,7 +13,7 @@ begin
   Application.Initialize;
   Application.MainFormOnTaskbar := True;
   Application.CreateForm(TForm1, Form1);
-  Application.CreateForm(TMonitoringForm, MonitoringForm);
-  Application.CreateForm(TOmronFQ_CR1SetsForm, OmronFQ_CR1SetsForm);
+  Application.CreateForm(TForm2, Form2);
+  Application.CreateForm(TForm3, Form3);
   Application.Run;
 end.
